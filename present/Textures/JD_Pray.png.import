@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chvsbj6ndqv6k"
-path.s3tc="res://.godot/imported/pixel_art_large.png-6f3cbeaa291d3a8defa797c194a9d805.s3tc.ctex"
+uid="uid://dkefwo2j5bdj1"
+path.s3tc="res://.godot/imported/JD_Pray.png-f8e475602ed9f5d4ab8981a9efda6a18.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures/pixel_art_large.png"
-dest_files=["res://.godot/imported/pixel_art_large.png-6f3cbeaa291d3a8defa797c194a9d805.s3tc.ctex"]
+source_file="res://Textures/JD_Pray.png"
+dest_files=["res://.godot/imported/JD_Pray.png-f8e475602ed9f5d4ab8981a9efda6a18.s3tc.ctex"]
 
 [params]
 

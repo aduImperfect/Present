@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://ksak2t6pq0sc"]
+
+[ext_resource type="Texture2D" uid="uid://dkefwo2j5bdj1" path="res://Textures/JD_Pray.png" id="1_djv7n"]
+[ext_resource type="Script" uid="uid://cwcyet573okul" path="res://Scripts/area_interaction.gd" id="1_tf4tg"]
+[ext_resource type="AudioStream" uid="uid://bx4ng8xurx56f" path="res://Audio/winteriscoming.wav" id="2_7b142"]
+[ext_resource type="AudioStream" uid="uid://s5u2yksuihsy" path="res://Audio/jugaad_speaks_1.wav" id="3_0wmov"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_djv7n"]
+size = Vector3(10, 2.5, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tf4tg"]
+albedo_texture = ExtResource("1_djv7n")
+
+[sub_resource type="QuadMesh" id="QuadMesh_0wmov"]
+
+[node name="Prayframe" type="Node3D" unique_id=1487509168]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=72798493]
+script = ExtResource("1_tf4tg")
+default_audio_stream = ExtResource("3_0wmov")
+audio_stream = ExtResource("2_7b142")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=542665763]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4.524658)
+shape = SubResource("BoxShape3D_djv7n")
+
+[node name="Portrait" type="MeshInstance3D" parent="Area3D" unique_id=2028713474]
+transform = Transform3D(3.75, 0, 0, 0, 2.5, 0, 0, 0, 2.5, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_tf4tg")
+mesh = SubResource("QuadMesh_0wmov")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=93936235]
+attenuation_model = 3
+unit_size = 100.0
+max_db = 6.0
+max_distance = 100.0

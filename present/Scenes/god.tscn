@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://34xoybaf1txi"]
+
+[ext_resource type="Texture2D" uid="uid://chvsbj6ndqv6k" path="res://Textures/pixel_art_large.png" id="1_d2may"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lwqne"]
+albedo_texture = ExtResource("1_d2may")
+
+[sub_resource type="QuadMesh" id="QuadMesh_m6x6n"]
+
+[node name="God" type="Node3D" unique_id=1375538144]
+
+[node name="Portrait" type="MeshInstance3D" parent="." unique_id=657504302]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_lwqne")
+mesh = SubResource("QuadMesh_m6x6n")
