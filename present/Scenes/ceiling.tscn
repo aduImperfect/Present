@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b0irmojmua8cx"]
+
+[ext_resource type="Texture2D" uid="uid://di4h8lk68spyb" path="res://Textures/Dungeon_brick_wall_grey.png" id="1_bycnq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_27ou7"]
+albedo_texture = ExtResource("1_bycnq")
+
+[sub_resource type="BoxMesh" id="BoxMesh_d155t"]
+size = Vector3(1, 1.1807861, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjehn"]
+size = Vector3(1, 1.182, 1)
+
+[node name="Ceiling" type="Node3D" unique_id=1287926691]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1987389172]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1426097966]
+material_override = SubResource("StandardMaterial3D_27ou7")
+mesh = SubResource("BoxMesh_d155t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=669009086]
+shape = SubResource("BoxShape3D_yjehn")
+debug_color = Color(0, 0.6, 0.69803923, 1)

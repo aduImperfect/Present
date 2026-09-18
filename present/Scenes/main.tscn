@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://buullm3ty8jnq"]
+
+[ext_resource type="PackedScene" uid="uid://c1l1c4m42geuv" path="res://Scenes/soldier.tscn" id="1_jjgbg"]
+[ext_resource type="PackedScene" uid="uid://bw6sa8hm7yvq4" path="res://Scenes/ground.tscn" id="2_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://digxwdhlnfvee" path="res://Scenes/wall.tscn" id="3_8gbba"]
+[ext_resource type="Script" uid="uid://7m6rcvbbij4q" path="res://Scripts/player_character.gd" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://b0irmojmua8cx" path="res://Scenes/ceiling.tscn" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://brs88s5hxv421" path="res://Scenes/orc.tscn" id="6_21xkr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
+
+[node name="Node3D" type="Node3D" unique_id=1406904920]
+
+[node name="Soldier" parent="." unique_id=990575850 instance=ExtResource("1_jjgbg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43986976, 0)
+
+[node name="Ground" parent="." unique_id=1287926691 instance=ExtResource("2_bo1nx")]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, -1.5, 0)
+
+[node name="Wall" parent="." unique_id=141181824 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -5, 5, -15)
+
+[node name="Wall2" parent="." unique_id=252340943 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 5, 5, -15)
+
+[node name="Wall3" parent="." unique_id=106694979 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 15, 5, -15)
+
+[node name="Wall4" parent="." unique_id=2004098452 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 25, 5, -15)
+
+[node name="Wall5" parent="." unique_id=122946869 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -5, 5, 30)
+
+[node name="Wall6" parent="." unique_id=1396398566 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 5, 5, 30)
+
+[node name="Wall7" parent="." unique_id=869148869 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 15, 5, 30)
+
+[node name="Wall8" parent="." unique_id=30565279 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 25, 5, 30)
+
+[node name="PlayerCharacter" type="CharacterBody3D" parent="." unique_id=2105354996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.0386906, 3.879323)
+floor_max_angle = 0.17453292
+script = ExtResource("4_jjvhh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerCharacter" unique_id=1005625522]
+shape = SubResource("BoxShape3D_m6x6n")
+
+[node name="CamPivot" type="Node3D" parent="PlayerCharacter" unique_id=1810975860]
+
+[node name="CamPitch" type="SpringArm3D" parent="PlayerCharacter/CamPivot" unique_id=940363503]
+spring_length = 4.0
+
+[node name="Camera3D" type="Camera3D" parent="PlayerCharacter/CamPivot/CamPitch" unique_id=1593653269]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 5, 5)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="PlayerCharacter/CamPivot/CamPitch/Camera3D" unique_id=1743991782]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -2.6951694, 4.66817)
+spot_range = 20.0
+spot_attenuation = 0.1
+
+[node name="AreaLight3D" type="AreaLight3D" parent="PlayerCharacter" unique_id=672889738]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, 13.660254, 0)
+area_range = 20.0
+area_attenuation = 0.5
+
+[node name="Ceiling" parent="." unique_id=599588367 instance=ExtResource("5_kry3j")]
+transform = Transform3D(100, 0, 0, 0, 1, 0, 0, 0, 100, 0, 11.5, 0)
+visible = false
+
+[node name="Orc" parent="." unique_id=974761849 instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.902838, 0.15119612, -4.3004036)
