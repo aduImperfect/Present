@@ -6,9 +6,15 @@
 [ext_resource type="Script" uid="uid://7m6rcvbbij4q" path="res://Scripts/player_character.gd" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://b0irmojmua8cx" path="res://Scenes/ceiling.tscn" id="5_kry3j"]
 [ext_resource type="PackedScene" uid="uid://brs88s5hxv421" path="res://Scenes/orc.tscn" id="6_21xkr"]
+[ext_resource type="Texture2D" uid="uid://dlux2ilx7bsst" path="res://Textures/dcc_example_num.png" id="7_6bp64"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
 size = Vector3(1, 3, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_344ge"]
+albedo_texture = ExtResource("7_6bp64")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m6x6n"]
 
 [node name="Node3D" type="Node3D" unique_id=1406904920]
 
@@ -17,37 +23,13 @@ transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 11.5, 0)
 visible = false
 
 [node name="Ground" parent="." unique_id=1287926691 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, -1.5, 0)
+transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 0, -1.5, 0)
 
 [node name="Soldier" parent="." unique_id=990575850 instance=ExtResource("1_jjgbg")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4226147, 0)
 
 [node name="Orc" parent="." unique_id=974761849 instance=ExtResource("6_21xkr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.902838, 1.2112466, -4.3004036)
-
-[node name="Wall" parent="." unique_id=141181824 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -5, 5, -15)
-
-[node name="Wall2" parent="." unique_id=252340943 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 5, 5, -15)
-
-[node name="Wall3" parent="." unique_id=106694979 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 15, 5, -15)
-
-[node name="Wall4" parent="." unique_id=2004098452 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 25, 5, -15)
-
-[node name="Wall5" parent="." unique_id=122946869 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -5, 5, 30)
-
-[node name="Wall6" parent="." unique_id=1396398566 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 5, 5, 30)
-
-[node name="Wall7" parent="." unique_id=869148869 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 15, 5, 30)
-
-[node name="Wall8" parent="." unique_id=30565279 instance=ExtResource("3_8gbba")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 25, 5, 30)
 
 [node name="PlayerCharacter" type="CharacterBody3D" parent="." unique_id=2105354996]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.0386906, 3.879323)
@@ -76,3 +58,1449 @@ spot_attenuation = 0.1
 transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, 13.660254, 0)
 area_range = 20.0
 area_attenuation = 0.5
+
+[node name="Dungeon1_H_Walls" type="Node3D" parent="." unique_id=1475344302]
+
+[node name="Wall" parent="Dungeon1_H_Walls" unique_id=141181824 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -155, 5, -200)
+
+[node name="Wall2" parent="Dungeon1_H_Walls" unique_id=252340943 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -145.04, 5, -200)
+
+[node name="Wall3" parent="Dungeon1_H_Walls" unique_id=106694979 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -135.04, 5, -200)
+
+[node name="Wall4" parent="Dungeon1_H_Walls" unique_id=2004098452 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -125.03999, 5, -200)
+
+[node name="Wall5" parent="Dungeon1_H_Walls" unique_id=153979137 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -115, 5, -200)
+
+[node name="Wall6" parent="Dungeon1_H_Walls" unique_id=303664659 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -200)
+
+[node name="Wall7" parent="Dungeon1_H_Walls" unique_id=900408339 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -200)
+
+[node name="Wall8" parent="Dungeon1_H_Walls" unique_id=1028515791 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -85, 5, -200)
+
+[node name="Wall9" parent="Dungeon1_H_Walls" unique_id=1063378330 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -75, 5, -200)
+
+[node name="Wall10" parent="Dungeon1_H_Walls" unique_id=888560778 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -65, 5, -200)
+
+[node name="Wall11" parent="Dungeon1_H_Walls" unique_id=1262210349 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -200)
+
+[node name="Wall12" parent="Dungeon1_H_Walls" unique_id=826915756 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20.039993, 5, -200)
+
+[node name="Wall13" parent="Dungeon1_H_Walls" unique_id=1863468906 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10.039993, 5, -200)
+
+[node name="Wall14" parent="Dungeon1_H_Walls" unique_id=1491894595 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -0.039993286, 5, -200)
+
+[node name="Wall15" parent="Dungeon1_H_Walls" unique_id=1794405999 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 10, 5, -200)
+
+[node name="Wall16" parent="Dungeon1_H_Walls" unique_id=176709840 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, -200)
+
+[node name="Wall17" parent="Dungeon1_H_Walls" unique_id=1795774172 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, -200)
+
+[node name="Wall18" parent="Dungeon1_H_Walls" unique_id=4665582 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, -200)
+
+[node name="Wall19" parent="Dungeon1_H_Walls" unique_id=1494316784 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -200)
+
+[node name="Wall20" parent="Dungeon1_H_Walls" unique_id=1942051349 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 80, 5, -200)
+
+[node name="Wall21" parent="Dungeon1_H_Walls" unique_id=1483701130 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 90, 5, -200)
+
+[node name="Wall22" parent="Dungeon1_H_Walls" unique_id=1725052159 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 100, 5, -200)
+
+[node name="Wall23" parent="Dungeon1_H_Walls" unique_id=305099996 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 134.96, 5, -200)
+
+[node name="Wall24" parent="Dungeon1_H_Walls" unique_id=185586588 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 144.96, 5, -200)
+
+[node name="Wall25" parent="Dungeon1_H_Walls" unique_id=632982763 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 155, 5, -200)
+
+[node name="Wall26" parent="Dungeon1_H_Walls" unique_id=372081895 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 165, 5, -200)
+
+[node name="Wall27" parent="Dungeon1_H_Walls" unique_id=1359169959 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 175, 5, -200)
+
+[node name="Wall28" parent="Dungeon1_H_Walls" unique_id=703089097 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 185, 5, -200)
+
+[node name="Wall29" parent="Dungeon1_H_Walls" unique_id=1585804136 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 195, 5, -200)
+
+[node name="Wall30" parent="Dungeon1_H_Walls" unique_id=1821733590 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, -165)
+
+[node name="Wall31" parent="Dungeon1_H_Walls" unique_id=1270347516 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, -165)
+
+[node name="Wall32" parent="Dungeon1_H_Walls" unique_id=1471578761 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, -165)
+
+[node name="Wall33" parent="Dungeon1_H_Walls" unique_id=1742841625 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, -165)
+
+[node name="Wall34" parent="Dungeon1_H_Walls" unique_id=2039251193 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160, 5, -165)
+
+[node name="Wall35" parent="Dungeon1_H_Walls" unique_id=333776462 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, -110)
+
+[node name="Wall36" parent="Dungeon1_H_Walls" unique_id=1801688684 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, -110)
+
+[node name="Wall37" parent="Dungeon1_H_Walls" unique_id=547408594 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, -110)
+
+[node name="Wall38" parent="Dungeon1_H_Walls" unique_id=932286156 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, -110)
+
+[node name="Wall39" parent="Dungeon1_H_Walls" unique_id=915709254 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160, 5, -110)
+
+[node name="Wall40" parent="Dungeon1_H_Walls" unique_id=1780508542 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, -95)
+
+[node name="Wall41" parent="Dungeon1_H_Walls" unique_id=1524816128 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, -95)
+
+[node name="Wall42" parent="Dungeon1_H_Walls" unique_id=1050223840 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, -95)
+
+[node name="Wall43" parent="Dungeon1_H_Walls" unique_id=1618683621 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, -95)
+
+[node name="Wall44" parent="Dungeon1_H_Walls" unique_id=294941347 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, -40)
+
+[node name="Wall45" parent="Dungeon1_H_Walls" unique_id=233586046 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, -40)
+
+[node name="Wall46" parent="Dungeon1_H_Walls" unique_id=111042281 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, -40)
+
+[node name="Wall47" parent="Dungeon1_H_Walls" unique_id=953084450 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, -40)
+
+[node name="Wall48" parent="Dungeon1_H_Walls" unique_id=1918014207 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, -10)
+
+[node name="Wall49" parent="Dungeon1_H_Walls" unique_id=1824708283 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, -10)
+
+[node name="Wall50" parent="Dungeon1_H_Walls" unique_id=530434073 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, -10)
+
+[node name="Wall51" parent="Dungeon1_H_Walls" unique_id=227089734 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, -10)
+
+[node name="Wall52" parent="Dungeon1_H_Walls" unique_id=2112241326 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160, 5, -10)
+
+[node name="Wall53" parent="Dungeon1_H_Walls" unique_id=1584949649 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -150.04, 5, -10)
+
+[node name="Wall54" parent="Dungeon1_H_Walls" unique_id=1233985493 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -140.04, 5, -10)
+
+[node name="Wall55" parent="Dungeon1_H_Walls" unique_id=652425196 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, 10)
+
+[node name="Wall56" parent="Dungeon1_H_Walls" unique_id=1854599426 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, 10)
+
+[node name="Wall57" parent="Dungeon1_H_Walls" unique_id=217723334 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, 10)
+
+[node name="Wall58" parent="Dungeon1_H_Walls" unique_id=748262738 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, 10)
+
+[node name="Wall59" parent="Dungeon1_H_Walls" unique_id=1398964559 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160, 5, 10)
+
+[node name="Wall60" parent="Dungeon1_H_Walls" unique_id=818365684 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -150.04, 5, 10)
+
+[node name="Wall61" parent="Dungeon1_H_Walls" unique_id=200584624 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -140.04, 5, 10)
+
+[node name="Wall62" parent="Dungeon1_H_Walls" unique_id=283677400 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, 40)
+
+[node name="Wall63" parent="Dungeon1_H_Walls" unique_id=725390860 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, 40)
+
+[node name="Wall64" parent="Dungeon1_H_Walls" unique_id=2063322652 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, 40)
+
+[node name="Wall65" parent="Dungeon1_H_Walls" unique_id=1931364027 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, 40)
+
+[node name="Wall66" parent="Dungeon1_H_Walls" unique_id=2097730851 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, 95)
+
+[node name="Wall67" parent="Dungeon1_H_Walls" unique_id=417538638 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, 95)
+
+[node name="Wall68" parent="Dungeon1_H_Walls" unique_id=452744484 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, 95)
+
+[node name="Wall69" parent="Dungeon1_H_Walls" unique_id=1978635728 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, 95)
+
+[node name="Wall70" parent="Dungeon1_H_Walls" unique_id=1079785714 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, 110)
+
+[node name="Wall71" parent="Dungeon1_H_Walls" unique_id=417576902 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, 110)
+
+[node name="Wall72" parent="Dungeon1_H_Walls" unique_id=434414466 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, 110)
+
+[node name="Wall73" parent="Dungeon1_H_Walls" unique_id=673238909 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, 110)
+
+[node name="Wall74" parent="Dungeon1_H_Walls" unique_id=1553391498 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160.04, 5, 110)
+
+[node name="Wall75" parent="Dungeon1_H_Walls" unique_id=2052432725 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -200, 5, 165)
+
+[node name="Wall76" parent="Dungeon1_H_Walls" unique_id=933190860 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -190.04, 5, 165)
+
+[node name="Wall77" parent="Dungeon1_H_Walls" unique_id=1340577625 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -180.04, 5, 165)
+
+[node name="Wall78" parent="Dungeon1_H_Walls" unique_id=1173380503 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -170.04, 5, 165)
+
+[node name="Wall79" parent="Dungeon1_H_Walls" unique_id=143688443 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160.04, 5, 165)
+
+[node name="Wall80" parent="Dungeon1_H_Walls" unique_id=1892780775 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -135.04, 5, -180)
+
+[node name="Wall81" parent="Dungeon1_H_Walls" unique_id=621836259 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -125.03999, 5, -180)
+
+[node name="Wall82" parent="Dungeon1_H_Walls" unique_id=1763719084 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -115, 5, -180)
+
+[node name="Wall83" parent="Dungeon1_H_Walls" unique_id=1320515155 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -180)
+
+[node name="Wall84" parent="Dungeon1_H_Walls" unique_id=1394852737 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -180)
+
+[node name="Wall85" parent="Dungeon1_H_Walls" unique_id=1550532613 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -165)
+
+[node name="Wall86" parent="Dungeon1_H_Walls" unique_id=1005618827 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -165)
+
+[node name="Wall87" parent="Dungeon1_H_Walls" unique_id=939519183 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -145)
+
+[node name="Wall88" parent="Dungeon1_H_Walls" unique_id=1120192082 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -145)
+
+[node name="Wall89" parent="Dungeon1_H_Walls" unique_id=1206887937 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -130)
+
+[node name="Wall90" parent="Dungeon1_H_Walls" unique_id=421914911 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -130)
+
+[node name="Wall91" parent="Dungeon1_H_Walls" unique_id=198157759 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -110)
+
+[node name="Wall92" parent="Dungeon1_H_Walls" unique_id=1379938214 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -110)
+
+[node name="Wall93" parent="Dungeon1_H_Walls" unique_id=1875146122 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -135.04, 5, -80)
+
+[node name="Wall94" parent="Dungeon1_H_Walls" unique_id=1970064086 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -125.03999, 5, -80)
+
+[node name="Wall95" parent="Dungeon1_H_Walls" unique_id=548588413 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -115, 5, -80)
+
+[node name="Wall96" parent="Dungeon1_H_Walls" unique_id=1058066676 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, -80)
+
+[node name="Wall97" parent="Dungeon1_H_Walls" unique_id=1216838079 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -80)
+
+[node name="Wall98" parent="Dungeon1_H_Walls" unique_id=1579523691 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160.04, 5, -60)
+
+[node name="Wall99" parent="Dungeon1_H_Walls" unique_id=629004832 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -150.04, 5, -60)
+
+[node name="Wall100" parent="Dungeon1_H_Walls" unique_id=1792916870 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -140, 5, -60)
+
+[node name="Wall101" parent="Dungeon1_H_Walls" unique_id=2081202118 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -130, 5, -60)
+
+[node name="Wall102" parent="Dungeon1_H_Walls" unique_id=1252528066 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -120, 5, -60)
+
+[node name="Wall103" parent="Dungeon1_H_Walls" unique_id=428567334 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -130, 5, -30)
+
+[node name="Wall104" parent="Dungeon1_H_Walls" unique_id=1462225524 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -120, 5, -30)
+
+[node name="Wall105" parent="Dungeon1_H_Walls" unique_id=1849472096 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -130, 5, 30)
+
+[node name="Wall106" parent="Dungeon1_H_Walls" unique_id=672089118 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -120, 5, 30)
+
+[node name="Wall107" parent="Dungeon1_H_Walls" unique_id=1472246540 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -155, 5, 60)
+
+[node name="Wall108" parent="Dungeon1_H_Walls" unique_id=1217826989 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -145.04, 5, 60)
+
+[node name="Wall109" parent="Dungeon1_H_Walls" unique_id=1427966026 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -135.04, 5, 60)
+
+[node name="Wall110" parent="Dungeon1_H_Walls" unique_id=1097649488 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -125.03999, 5, 60)
+
+[node name="Wall111" parent="Dungeon1_H_Walls" unique_id=1795601752 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -135, 5, 80)
+
+[node name="Wall112" parent="Dungeon1_H_Walls" unique_id=1594373389 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -125.03999, 5, 80)
+
+[node name="Wall113" parent="Dungeon1_H_Walls" unique_id=929332587 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -115.03999, 5, 80)
+
+[node name="Wall114" parent="Dungeon1_H_Walls" unique_id=822076097 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105.03999, 5, 80)
+
+[node name="Wall115" parent="Dungeon1_H_Walls" unique_id=1340281252 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 80)
+
+[node name="Wall116" parent="Dungeon1_H_Walls" unique_id=1444500599 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -135, 5, 180)
+
+[node name="Wall117" parent="Dungeon1_H_Walls" unique_id=832800801 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -125.03999, 5, 180)
+
+[node name="Wall118" parent="Dungeon1_H_Walls" unique_id=2127702985 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -115.03999, 5, 180)
+
+[node name="Wall119" parent="Dungeon1_H_Walls" unique_id=375700369 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105.03999, 5, 180)
+
+[node name="Wall120" parent="Dungeon1_H_Walls" unique_id=1373948222 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 180)
+
+[node name="Wall121" parent="Dungeon1_H_Walls" unique_id=2025968285 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, 110)
+
+[node name="Wall122" parent="Dungeon1_H_Walls" unique_id=686805842 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 110)
+
+[node name="Wall123" parent="Dungeon1_H_Walls" unique_id=1870689387 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, 130)
+
+[node name="Wall124" parent="Dungeon1_H_Walls" unique_id=1571735083 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 130)
+
+[node name="Wall125" parent="Dungeon1_H_Walls" unique_id=2107500328 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, 145)
+
+[node name="Wall126" parent="Dungeon1_H_Walls" unique_id=1589150022 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 145)
+
+[node name="Wall127" parent="Dungeon1_H_Walls" unique_id=475757965 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -105, 5, 165)
+
+[node name="Wall128" parent="Dungeon1_H_Walls" unique_id=177880864 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 165)
+
+[node name="Wall129" parent="Dungeon1_H_Walls" unique_id=876156057 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 180)
+
+[node name="Wall130" parent="Dungeon1_H_Walls" unique_id=1823349963 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 180)
+
+[node name="Wall131" parent="Dungeon1_H_Walls" unique_id=510138733 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 165)
+
+[node name="Wall132" parent="Dungeon1_H_Walls" unique_id=1309928360 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 165)
+
+[node name="Wall133" parent="Dungeon1_H_Walls" unique_id=1820321044 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 145)
+
+[node name="Wall134" parent="Dungeon1_H_Walls" unique_id=986905949 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 145)
+
+[node name="Wall135" parent="Dungeon1_H_Walls" unique_id=1073252112 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 130)
+
+[node name="Wall136" parent="Dungeon1_H_Walls" unique_id=1376610528 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 130)
+
+[node name="Wall137" parent="Dungeon1_H_Walls" unique_id=410742339 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, 130)
+
+[node name="Wall138" parent="Dungeon1_H_Walls" unique_id=2044129569 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, 130)
+
+[node name="Wall139" parent="Dungeon1_H_Walls" unique_id=379663897 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 130)
+
+[node name="Wall140" parent="Dungeon1_H_Walls" unique_id=2014492849 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, 130)
+
+[node name="Wall141" parent="Dungeon1_H_Walls" unique_id=772139447 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, 130)
+
+[node name="Wall142" parent="Dungeon1_H_Walls" unique_id=1402795173 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 145)
+
+[node name="Wall143" parent="Dungeon1_H_Walls" unique_id=410370660 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, 145)
+
+[node name="Wall144" parent="Dungeon1_H_Walls" unique_id=771252264 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, 145)
+
+[node name="Wall145" parent="Dungeon1_H_Walls" unique_id=268806924 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 165)
+
+[node name="Wall146" parent="Dungeon1_H_Walls" unique_id=688306092 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 180)
+
+[node name="Wall147" parent="Dungeon1_H_Walls" unique_id=1098658362 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 25, 5, 130)
+
+[node name="Wall148" parent="Dungeon1_H_Walls" unique_id=1346098856 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 35, 5, 130)
+
+[node name="Wall149" parent="Dungeon1_H_Walls" unique_id=1503488968 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 45, 5, 130)
+
+[node name="Wall150" parent="Dungeon1_H_Walls" unique_id=204274407 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 55, 5, 130)
+
+[node name="Wall151" parent="Dungeon1_H_Walls" unique_id=436360005 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 65, 5, 130)
+
+[node name="Wall152" parent="Dungeon1_H_Walls" unique_id=443996283 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 75, 5, 130)
+
+[node name="Wall153" parent="Dungeon1_H_Walls" unique_id=210194047 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 25, 5, 145)
+
+[node name="Wall154" parent="Dungeon1_H_Walls" unique_id=536528436 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 35, 5, 145)
+
+[node name="Wall155" parent="Dungeon1_H_Walls" unique_id=724655344 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 45, 5, 145)
+
+[node name="Wall156" parent="Dungeon1_H_Walls" unique_id=810825283 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, 165)
+
+[node name="Wall157" parent="Dungeon1_H_Walls" unique_id=1895218460 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, 180)
+
+[node name="Wall158" parent="Dungeon1_H_Walls" unique_id=2136557928 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 105, 5, 130)
+
+[node name="Wall159" parent="Dungeon1_H_Walls" unique_id=808864843 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 115, 5, 130)
+
+[node name="Wall160" parent="Dungeon1_H_Walls" unique_id=498755254 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 125, 5, 130)
+
+[node name="Wall161" parent="Dungeon1_H_Walls" unique_id=782561410 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 110)
+
+[node name="Wall162" parent="Dungeon1_H_Walls" unique_id=975206628 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 110)
+
+[node name="Wall163" parent="Dungeon1_H_Walls" unique_id=844574022 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, 110)
+
+[node name="Wall164" parent="Dungeon1_H_Walls" unique_id=1896906758 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, 110)
+
+[node name="Wall165" parent="Dungeon1_H_Walls" unique_id=1133900371 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 110)
+
+[node name="Wall166" parent="Dungeon1_H_Walls" unique_id=2068011827 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, 110)
+
+[node name="Wall167" parent="Dungeon1_H_Walls" unique_id=398381932 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, 110)
+
+[node name="Wall168" parent="Dungeon1_H_Walls" unique_id=1632288824 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 0, 5, 110)
+
+[node name="Wall169" parent="Dungeon1_H_Walls" unique_id=1651394954 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 10, 5, 110)
+
+[node name="Wall170" parent="Dungeon1_H_Walls" unique_id=1800473866 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, 110)
+
+[node name="Wall171" parent="Dungeon1_H_Walls" unique_id=1852913371 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, 110)
+
+[node name="Wall172" parent="Dungeon1_H_Walls" unique_id=197471477 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, 110)
+
+[node name="Wall173" parent="Dungeon1_H_Walls" unique_id=731773950 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, 110)
+
+[node name="Wall174" parent="Dungeon1_H_Walls" unique_id=1759430544 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 60, 5, 110)
+
+[node name="Wall175" parent="Dungeon1_H_Walls" unique_id=968599361 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 70, 5, 110)
+
+[node name="Wall176" parent="Dungeon1_H_Walls" unique_id=498190588 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 80, 5, 110)
+
+[node name="Wall177" parent="Dungeon1_H_Walls" unique_id=2038565507 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 90, 5, 110)
+
+[node name="Wall178" parent="Dungeon1_H_Walls" unique_id=1431015368 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 100, 5, 110)
+
+[node name="Wall179" parent="Dungeon1_H_Walls" unique_id=1449198694 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 110, 5, 110)
+
+[node name="Wall180" parent="Dungeon1_H_Walls" unique_id=1860061720 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, 110)
+
+[node name="Wall181" parent="Dungeon1_H_Walls" unique_id=471295664 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, 110)
+
+[node name="Wall182" parent="Dungeon1_H_Walls" unique_id=869235020 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 140, 5, 110)
+
+[node name="Wall183" parent="Dungeon1_H_Walls" unique_id=1697862485 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 150, 5, 110)
+
+[node name="Wall184" parent="Dungeon1_H_Walls" unique_id=1140652601 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, 110)
+
+[node name="Wall185" parent="Dungeon1_H_Walls" unique_id=769465448 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, 110)
+
+[node name="Wall186" parent="Dungeon1_H_Walls" unique_id=1814143674 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, 110)
+
+[node name="Wall187" parent="Dungeon1_H_Walls" unique_id=1284292951 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, 80)
+
+[node name="Wall188" parent="Dungeon1_H_Walls" unique_id=594496519 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, 80)
+
+[node name="Wall189" parent="Dungeon1_H_Walls" unique_id=1376200020 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, 80)
+
+[node name="Wall190" parent="Dungeon1_H_Walls" unique_id=1902191532 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, 60)
+
+[node name="Wall191" parent="Dungeon1_H_Walls" unique_id=462419103 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, 60)
+
+[node name="Wall192" parent="Dungeon1_H_Walls" unique_id=2043178393 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 140, 5, 60)
+
+[node name="Wall193" parent="Dungeon1_H_Walls" unique_id=1406010661 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 150, 5, 60)
+
+[node name="Wall194" parent="Dungeon1_H_Walls" unique_id=1749425830 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 90, 5, 80)
+
+[node name="Wall195" parent="Dungeon1_H_Walls" unique_id=74789662 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 100, 5, 80)
+
+[node name="Wall196" parent="Dungeon1_H_Walls" unique_id=1803492087 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 110, 5, 80)
+
+[node name="Wall197" parent="Dungeon1_H_Walls" unique_id=1108492157 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 80, 5, 60)
+
+[node name="Wall198" parent="Dungeon1_H_Walls" unique_id=1599243505 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 70, 5, 80)
+
+[node name="Wall199" parent="Dungeon1_H_Walls" unique_id=944035101 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, 95)
+
+[node name="Wall200" parent="Dungeon1_H_Walls" unique_id=161924665 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, 95)
+
+[node name="Wall201" parent="Dungeon1_H_Walls" unique_id=1873594494 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, 95)
+
+[node name="Wall202" parent="Dungeon1_H_Walls" unique_id=1807822306 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 60, 5, 95)
+
+[node name="Wall203" parent="Dungeon1_H_Walls" unique_id=283419396 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, 95)
+
+[node name="Wall204" parent="Dungeon1_H_Walls" unique_id=793780517 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, 80)
+
+[node name="Wall205" parent="Dungeon1_H_Walls" unique_id=194588317 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, 110)
+
+[node name="Wall206" parent="Dungeon1_H_Walls" unique_id=715469144 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 10, 5, 80)
+
+[node name="Wall207" parent="Dungeon1_H_Walls" unique_id=513449422 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 0, 5, 60)
+
+[node name="Wall208" parent="Dungeon1_H_Walls" unique_id=863097108 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 80)
+
+[node name="Wall209" parent="Dungeon1_H_Walls" unique_id=790070292 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, 80)
+
+[node name="Wall210" parent="Dungeon1_H_Walls" unique_id=1281910130 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, 80)
+
+[node name="Wall211" parent="Dungeon1_H_Walls" unique_id=1354777088 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, 60)
+
+[node name="Wall212" parent="Dungeon1_H_Walls" unique_id=391999350 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 80)
+
+[node name="Wall213" parent="Dungeon1_H_Walls" unique_id=666235314 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 80)
+
+[node name="Wall214" parent="Dungeon1_H_Walls" unique_id=2044446199 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, 80)
+
+[node name="Wall215" parent="Dungeon1_H_Walls" unique_id=344375629 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 60)
+
+[node name="Wall216" parent="Dungeon1_H_Walls" unique_id=1832490151 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -85, 5, 60)
+
+[node name="Wall217" parent="Dungeon1_H_Walls" unique_id=1633832229 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -75, 5, 60)
+
+[node name="Wall218" parent="Dungeon1_H_Walls" unique_id=1078544874 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -65, 5, 60)
+
+[node name="Wall219" parent="Dungeon1_H_Walls" unique_id=2134383228 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, 30)
+
+[node name="Wall220" parent="Dungeon1_H_Walls" unique_id=645540396 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -85, 5, 30)
+
+[node name="Wall221" parent="Dungeon1_H_Walls" unique_id=1264747591 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -75, 5, 30)
+
+[node name="Wall222" parent="Dungeon1_H_Walls" unique_id=410935593 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 10)
+
+[node name="Wall223" parent="Dungeon1_H_Walls" unique_id=551855354 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 10)
+
+[node name="Wall224" parent="Dungeon1_H_Walls" unique_id=774372502 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, 10)
+
+[node name="Wall225" parent="Dungeon1_H_Walls" unique_id=511035454 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, 10)
+
+[node name="Wall226" parent="Dungeon1_H_Walls" unique_id=2034914745 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 40)
+
+[node name="Wall227" parent="Dungeon1_H_Walls" unique_id=14421386 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, 40)
+
+[node name="Wall228" parent="Dungeon1_H_Walls" unique_id=55824340 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, 40)
+
+[node name="Wall229" parent="Dungeon1_H_Walls" unique_id=824995604 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, -10)
+
+[node name="Wall230" parent="Dungeon1_H_Walls" unique_id=1667449250 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -10)
+
+[node name="Wall231" parent="Dungeon1_H_Walls" unique_id=459003549 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, -10)
+
+[node name="Wall232" parent="Dungeon1_H_Walls" unique_id=642040647 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, -10)
+
+[node name="Wall233" parent="Dungeon1_H_Walls" unique_id=1308944752 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -30)
+
+[node name="Wall234" parent="Dungeon1_H_Walls" unique_id=1396185978 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -85, 5, -30)
+
+[node name="Wall235" parent="Dungeon1_H_Walls" unique_id=212853204 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -75, 5, -30)
+
+[node name="Wall236" parent="Dungeon1_H_Walls" unique_id=1112263960 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -95, 5, -60)
+
+[node name="Wall237" parent="Dungeon1_H_Walls" unique_id=2101559418 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -85, 5, -60)
+
+[node name="Wall238" parent="Dungeon1_H_Walls" unique_id=1309169560 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -75, 5, -60)
+
+[node name="Wall239" parent="Dungeon1_H_Walls" unique_id=1216098808 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -65, 5, -60)
+
+[node name="Wall240" parent="Dungeon1_H_Walls" unique_id=713339637 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, -80)
+
+[node name="Wall241" parent="Dungeon1_H_Walls" unique_id=752735327 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -80)
+
+[node name="Wall242" parent="Dungeon1_H_Walls" unique_id=355164971 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, -80)
+
+[node name="Wall243" parent="Dungeon1_H_Walls" unique_id=333821175 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, -110)
+
+[node name="Wall244" parent="Dungeon1_H_Walls" unique_id=555628022 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -110)
+
+[node name="Wall245" parent="Dungeon1_H_Walls" unique_id=933626353 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, -110)
+
+[node name="Wall246" parent="Dungeon1_H_Walls" unique_id=800506849 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, -110)
+
+[node name="Wall247" parent="Dungeon1_H_Walls" unique_id=2131360975 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -110)
+
+[node name="Wall248" parent="Dungeon1_H_Walls" unique_id=353855528 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, -110)
+
+[node name="Wall249" parent="Dungeon1_H_Walls" unique_id=776918673 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, -110)
+
+[node name="Wall250" parent="Dungeon1_H_Walls" unique_id=693355875 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 0, 5, -110)
+
+[node name="Wall251" parent="Dungeon1_H_Walls" unique_id=895015118 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 10, 5, -110)
+
+[node name="Wall252" parent="Dungeon1_H_Walls" unique_id=621634405 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, -110)
+
+[node name="Wall253" parent="Dungeon1_H_Walls" unique_id=1118072351 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, -110)
+
+[node name="Wall254" parent="Dungeon1_H_Walls" unique_id=145822552 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, -110)
+
+[node name="Wall255" parent="Dungeon1_H_Walls" unique_id=1185165054 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -110)
+
+[node name="Wall256" parent="Dungeon1_H_Walls" unique_id=2097861365 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 60, 5, -110)
+
+[node name="Wall257" parent="Dungeon1_H_Walls" unique_id=634399165 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 70, 5, -110)
+
+[node name="Wall258" parent="Dungeon1_H_Walls" unique_id=1808450053 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 80, 5, -110)
+
+[node name="Wall259" parent="Dungeon1_H_Walls" unique_id=1236189301 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 90, 5, -110)
+
+[node name="Wall260" parent="Dungeon1_H_Walls" unique_id=675842663 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 100, 5, -110)
+
+[node name="Wall261" parent="Dungeon1_H_Walls" unique_id=1736098594 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 110, 5, -110)
+
+[node name="Wall262" parent="Dungeon1_H_Walls" unique_id=881541135 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, -110)
+
+[node name="Wall263" parent="Dungeon1_H_Walls" unique_id=991855917 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, -110)
+
+[node name="Wall264" parent="Dungeon1_H_Walls" unique_id=139588839 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 140, 5, -110)
+
+[node name="Wall265" parent="Dungeon1_H_Walls" unique_id=1840268730 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 150, 5, -110)
+
+[node name="Wall266" parent="Dungeon1_H_Walls" unique_id=342481084 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, -110)
+
+[node name="Wall267" parent="Dungeon1_H_Walls" unique_id=326323906 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, -110)
+
+[node name="Wall268" parent="Dungeon1_H_Walls" unique_id=935232740 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -40)
+
+[node name="Wall269" parent="Dungeon1_H_Walls" unique_id=2127614124 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, -40)
+
+[node name="Wall270" parent="Dungeon1_H_Walls" unique_id=2085396597 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, -40)
+
+[node name="Wall271" parent="Dungeon1_H_Walls" unique_id=1475276456 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 180, 5, 25)
+
+[node name="Wall272" parent="Dungeon1_H_Walls" unique_id=328521835 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, 25)
+
+[node name="Wall273" parent="Dungeon1_H_Walls" unique_id=8269853 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, 25)
+
+[node name="Wall274" parent="Dungeon1_H_Walls" unique_id=1111198807 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, 25)
+
+[node name="Wall275" parent="Dungeon1_H_Walls" unique_id=769331238 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, 25)
+
+[node name="Wall276" parent="Dungeon1_H_Walls" unique_id=492547500 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 180, 5, -25)
+
+[node name="Wall277" parent="Dungeon1_H_Walls" unique_id=884711208 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, -25)
+
+[node name="Wall278" parent="Dungeon1_H_Walls" unique_id=836542250 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, -25)
+
+[node name="Wall279" parent="Dungeon1_H_Walls" unique_id=2147261724 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, -25)
+
+[node name="Wall280" parent="Dungeon1_H_Walls" unique_id=1924511709 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, -25)
+
+[node name="Wall281" parent="Dungeon1_H_Walls" unique_id=2093294062 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, 40)
+
+[node name="Wall282" parent="Dungeon1_H_Walls" unique_id=129421791 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, 40)
+
+[node name="Wall283" parent="Dungeon1_H_Walls" unique_id=1027833842 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 140, 5, 40)
+
+[node name="Wall284" parent="Dungeon1_H_Walls" unique_id=938296289 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, -40)
+
+[node name="Wall285" parent="Dungeon1_H_Walls" unique_id=2087623803 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, -40)
+
+[node name="Wall286" parent="Dungeon1_H_Walls" unique_id=1467046586 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 140, 5, -40)
+
+[node name="Wall287" parent="Dungeon1_H_Walls" unique_id=343675233 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, -65)
+
+[node name="Wall288" parent="Dungeon1_H_Walls" unique_id=312408643 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, -65)
+
+[node name="Wall289" parent="Dungeon1_H_Walls" unique_id=1104615399 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 140, 5, -65)
+
+[node name="Wall290" parent="Dungeon1_H_Walls" unique_id=922840784 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 150, 5, -65)
+
+[node name="Wall291" parent="Dungeon1_H_Walls" unique_id=724220921 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, -65)
+
+[node name="Wall292" parent="Dungeon1_H_Walls" unique_id=60724620 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -80)
+
+[node name="Wall293" parent="Dungeon1_H_Walls" unique_id=780952681 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, -80)
+
+[node name="Wall294" parent="Dungeon1_H_Walls" unique_id=1374842413 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, -80)
+
+[node name="Wall295" parent="Dungeon1_H_Walls" unique_id=706313083 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 0, 5, -65)
+
+[node name="Wall296" parent="Dungeon1_H_Walls" unique_id=1784075713 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 10, 5, -80)
+
+[node name="Wall297" parent="Dungeon1_H_Walls" unique_id=2007325388 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, -80)
+
+[node name="Wall298" parent="Dungeon1_H_Walls" unique_id=738418761 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, -95)
+
+[node name="Wall299" parent="Dungeon1_H_Walls" unique_id=1026106456 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, -95)
+
+[node name="Wall300" parent="Dungeon1_H_Walls" unique_id=442311936 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, -95)
+
+[node name="Wall301" parent="Dungeon1_H_Walls" unique_id=1810877296 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -95)
+
+[node name="Wall302" parent="Dungeon1_H_Walls" unique_id=876935148 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 60, 5, -95)
+
+[node name="Wall303" parent="Dungeon1_H_Walls" unique_id=812629612 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 65, 5, -80)
+
+[node name="Wall304" parent="Dungeon1_H_Walls" unique_id=1198562247 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 75, 5, -80)
+
+[node name="Wall305" parent="Dungeon1_H_Walls" unique_id=1582255387 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 80, 5, -65)
+
+[node name="Wall306" parent="Dungeon1_H_Walls" unique_id=1194478429 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 90, 5, -80)
+
+[node name="Wall307" parent="Dungeon1_H_Walls" unique_id=1983220417 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 100, 5, -80)
+
+[node name="Wall308" parent="Dungeon1_H_Walls" unique_id=1188324954 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 110, 5, -80)
+
+[node name="Wall309" parent="Dungeon1_H_Walls" unique_id=1806015006 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, -80)
+
+[node name="Wall310" parent="Dungeon1_H_Walls" unique_id=2055835777 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, -80)
+
+[node name="Wall311" parent="Dungeon1_H_Walls" unique_id=1951452384 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, -80)
+
+[node name="Wall312" parent="Dungeon1_H_Walls" unique_id=1387000711 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, -80)
+
+[node name="Wall313" parent="Dungeon1_H_Walls" unique_id=1615257437 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, -110)
+
+[node name="Wall314" parent="Dungeon1_H_Walls" unique_id=842643818 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, -110)
+
+[node name="Wall315" parent="Dungeon1_H_Walls" unique_id=1856772007 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, -165)
+
+[node name="Wall316" parent="Dungeon1_H_Walls" unique_id=1145136430 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -165)
+
+[node name="Wall317" parent="Dungeon1_H_Walls" unique_id=1802910016 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, -145)
+
+[node name="Wall318" parent="Dungeon1_H_Walls" unique_id=2067633150 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -145)
+
+[node name="Wall319" parent="Dungeon1_H_Walls" unique_id=884606431 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, -130)
+
+[node name="Wall320" parent="Dungeon1_H_Walls" unique_id=2040400291 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, -130)
+
+[node name="Wall321" parent="Dungeon1_H_Walls" unique_id=288187868 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -50, 5, -130)
+
+[node name="Wall322" parent="Dungeon1_H_Walls" unique_id=1468550898 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -40, 5, -130)
+
+[node name="Wall323" parent="Dungeon1_H_Walls" unique_id=1875540655 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -130)
+
+[node name="Wall324" parent="Dungeon1_H_Walls" unique_id=2084968570 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20, 5, -130)
+
+[node name="Wall325" parent="Dungeon1_H_Walls" unique_id=358712443 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, -130)
+
+[node name="Wall326" parent="Dungeon1_H_Walls" unique_id=242141081 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -180)
+
+[node name="Wall327" parent="Dungeon1_H_Walls" unique_id=1608687204 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20.039993, 5, -180)
+
+[node name="Wall328" parent="Dungeon1_H_Walls" unique_id=1597931319 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -165)
+
+[node name="Wall329" parent="Dungeon1_H_Walls" unique_id=516480841 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20.039993, 5, -165)
+
+[node name="Wall330" parent="Dungeon1_H_Walls" unique_id=405093529 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, -145)
+
+[node name="Wall331" parent="Dungeon1_H_Walls" unique_id=1570246155 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20.039993, 5, -145)
+
+[node name="Wall332" parent="Dungeon1_H_Walls" unique_id=712741524 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10, 5, -145)
+
+[node name="Wall333" parent="Dungeon1_H_Walls" unique_id=1663347810 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, -180)
+
+[node name="Wall334" parent="Dungeon1_H_Walls" unique_id=2090670289 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -180)
+
+[node name="Wall335" parent="Dungeon1_H_Walls" unique_id=2046275218 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, -165)
+
+[node name="Wall336" parent="Dungeon1_H_Walls" unique_id=911157147 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -165)
+
+[node name="Wall337" parent="Dungeon1_H_Walls" unique_id=1652615655 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, -145)
+
+[node name="Wall338" parent="Dungeon1_H_Walls" unique_id=160272318 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 39.960007, 5, -145)
+
+[node name="Wall339" parent="Dungeon1_H_Walls" unique_id=1423359436 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -145)
+
+[node name="Wall340" parent="Dungeon1_H_Walls" unique_id=1881307367 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 30, 5, -130)
+
+[node name="Wall341" parent="Dungeon1_H_Walls" unique_id=1948056984 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 39.960007, 5, -130)
+
+[node name="Wall342" parent="Dungeon1_H_Walls" unique_id=1820506263 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, -130)
+
+[node name="Wall343" parent="Dungeon1_H_Walls" unique_id=627016921 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 59.960007, 5, -130)
+
+[node name="Wall344" parent="Dungeon1_H_Walls" unique_id=1889939744 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 70, 5, -130)
+
+[node name="Wall345" parent="Dungeon1_H_Walls" unique_id=767940492 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 109.96001, 5, -130)
+
+[node name="Wall346" parent="Dungeon1_H_Walls" unique_id=553935375 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 120, 5, -130)
+
+[node name="Wall347" parent="Dungeon1_H_Walls" unique_id=1219644797 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -160, 5, 200)
+
+[node name="Wall348" parent="Dungeon1_H_Walls" unique_id=604596546 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -150.04, 5, 200)
+
+[node name="Wall349" parent="Dungeon1_H_Walls" unique_id=1290249687 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -140.04, 5, 200)
+
+[node name="Wall350" parent="Dungeon1_H_Walls" unique_id=1733738238 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -130.04, 5, 200)
+
+[node name="Wall351" parent="Dungeon1_H_Walls" unique_id=95307531 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -120, 5, 200)
+
+[node name="Wall352" parent="Dungeon1_H_Walls" unique_id=55905458 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -110, 5, 200)
+
+[node name="Wall353" parent="Dungeon1_H_Walls" unique_id=243206834 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -100.03999, 5, 200)
+
+[node name="Wall354" parent="Dungeon1_H_Walls" unique_id=208676121 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -90.03999, 5, 200)
+
+[node name="Wall355" parent="Dungeon1_H_Walls" unique_id=1281488364 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -80.03999, 5, 200)
+
+[node name="Wall356" parent="Dungeon1_H_Walls" unique_id=1220530259 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -70, 5, 200)
+
+[node name="Wall357" parent="Dungeon1_H_Walls" unique_id=153576097 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -60, 5, 200)
+
+[node name="Wall358" parent="Dungeon1_H_Walls" unique_id=1092859760 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -30, 5, 200)
+
+[node name="Wall359" parent="Dungeon1_H_Walls" unique_id=1273303412 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -20.039993, 5, 200)
+
+[node name="Wall360" parent="Dungeon1_H_Walls" unique_id=2078214123 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -10.039993, 5, 200)
+
+[node name="Wall361" parent="Dungeon1_H_Walls" unique_id=2096587489 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -0.039993286, 5, 200)
+
+[node name="Wall362" parent="Dungeon1_H_Walls" unique_id=14543732 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 10, 5, 200)
+
+[node name="Wall363" parent="Dungeon1_H_Walls" unique_id=547424297 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 20, 5, 200)
+
+[node name="Wall364" parent="Dungeon1_H_Walls" unique_id=1851718951 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 29.960007, 5, 200)
+
+[node name="Wall365" parent="Dungeon1_H_Walls" unique_id=1268343730 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 40, 5, 200)
+
+[node name="Wall366" parent="Dungeon1_H_Walls" unique_id=1756323057 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, 200)
+
+[node name="Wall367" parent="Dungeon1_H_Walls" unique_id=1377587863 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, 180)
+
+[node name="Wall368" parent="Dungeon1_H_Walls" unique_id=2042877887 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 50, 5, 165)
+
+[node name="Wall369" parent="Dungeon1_H_Walls" unique_id=1231632962 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 75, 5, 200)
+
+[node name="Wall370" parent="Dungeon1_H_Walls" unique_id=1024044770 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 84.96001, 5, 200)
+
+[node name="Wall371" parent="Dungeon1_H_Walls" unique_id=1518256296 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 95, 5, 200)
+
+[node name="Wall372" parent="Dungeon1_H_Walls" unique_id=1275239474 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 105, 5, 200)
+
+[node name="Wall373" parent="Dungeon1_H_Walls" unique_id=1961606131 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 130, 5, 200)
+
+[node name="Wall374" parent="Dungeon1_H_Walls" unique_id=1323984815 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 139.96, 5, 200)
+
+[node name="Wall375" parent="Dungeon1_H_Walls" unique_id=162258603 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 150, 5, 200)
+
+[node name="Wall376" parent="Dungeon1_H_Walls" unique_id=904607558 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 160, 5, 200)
+
+[node name="Wall377" parent="Dungeon1_H_Walls" unique_id=721121208 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 170, 5, 200)
+
+[node name="Wall378" parent="Dungeon1_H_Walls" unique_id=303735835 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 179.96, 5, 200)
+
+[node name="Wall379" parent="Dungeon1_H_Walls" unique_id=34049108 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 190, 5, 200)
+
+[node name="Wall380" parent="Dungeon1_H_Walls" unique_id=510129610 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, 200, 5, 200)
+
+[node name="Wall381" parent="Dungeon1_H_Walls" unique_id=103946211 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -130.04, 5, 10)
+
+[node name="Wall382" parent="Dungeon1_H_Walls" unique_id=548257328 instance=ExtResource("3_8gbba")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 5, -130.04, 5, -10)
+
+[node name="Dungeon1_V_Walls" type="Node3D" parent="." unique_id=746759068]
+
+[node name="Wall" parent="Dungeon1_V_Walls" unique_id=2044066752 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -195)
+
+[node name="Wall2" parent="Dungeon1_V_Walls" unique_id=986198885 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -185)
+
+[node name="Wall3" parent="Dungeon1_V_Walls" unique_id=633424789 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -175)
+
+[node name="Wall4" parent="Dungeon1_V_Walls" unique_id=1525164688 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -165)
+
+[node name="Wall5" parent="Dungeon1_V_Walls" unique_id=1875037525 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -110)
+
+[node name="Wall6" parent="Dungeon1_V_Walls" unique_id=504262338 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -100)
+
+[node name="Wall7" parent="Dungeon1_V_Walls" unique_id=170530578 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -90)
+
+[node name="Wall8" parent="Dungeon1_V_Walls" unique_id=1241267514 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -80)
+
+[node name="Wall9" parent="Dungeon1_V_Walls" unique_id=1079929867 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -70)
+
+[node name="Wall10" parent="Dungeon1_V_Walls" unique_id=1605924197 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, -60)
+
+[node name="Wall11" parent="Dungeon1_V_Walls" unique_id=503266304 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, -95)
+
+[node name="Wall12" parent="Dungeon1_V_Walls" unique_id=2145168270 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, -85)
+
+[node name="Wall13" parent="Dungeon1_V_Walls" unique_id=738682923 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, -75)
+
+[node name="Wall14" parent="Dungeon1_V_Walls" unique_id=628235948 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, -65)
+
+[node name="Wall15" parent="Dungeon1_V_Walls" unique_id=1453913598 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, -55)
+
+[node name="Wall16" parent="Dungeon1_V_Walls" unique_id=965312888 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, -45)
+
+[node name="Wall17" parent="Dungeon1_V_Walls" unique_id=836119870 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -90)
+
+[node name="Wall18" parent="Dungeon1_V_Walls" unique_id=536027833 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -80)
+
+[node name="Wall19" parent="Dungeon1_V_Walls" unique_id=1033679552 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -70)
+
+[node name="Wall20" parent="Dungeon1_V_Walls" unique_id=1779601974 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -60)
+
+[node name="Wall21" parent="Dungeon1_V_Walls" unique_id=836558524 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -50)
+
+[node name="Wall22" parent="Dungeon1_V_Walls" unique_id=1363174375 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -40)
+
+[node name="Wall23" parent="Dungeon1_V_Walls" unique_id=1145523046 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -160)
+
+[node name="Wall24" parent="Dungeon1_V_Walls" unique_id=1008168483 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -150)
+
+[node name="Wall25" parent="Dungeon1_V_Walls" unique_id=1992399872 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -140)
+
+[node name="Wall26" parent="Dungeon1_V_Walls" unique_id=405774491 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -130)
+
+[node name="Wall27" parent="Dungeon1_V_Walls" unique_id=2122892517 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -120)
+
+[node name="Wall28" parent="Dungeon1_V_Walls" unique_id=321942388 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -110)
+
+[node name="Wall29" parent="Dungeon1_V_Walls" unique_id=768618286 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -130)
+
+[node name="Wall30" parent="Dungeon1_V_Walls" unique_id=1165587968 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -120)
+
+[node name="Wall31" parent="Dungeon1_V_Walls" unique_id=1752750734 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -110)
+
+[node name="Wall32" parent="Dungeon1_V_Walls" unique_id=1887702788 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -100)
+
+[node name="Wall33" parent="Dungeon1_V_Walls" unique_id=1745247438 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -90)
+
+[node name="Wall34" parent="Dungeon1_V_Walls" unique_id=526346964 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -80)
+
+[node name="Wall35" parent="Dungeon1_V_Walls" unique_id=939195337 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -180)
+
+[node name="Wall36" parent="Dungeon1_V_Walls" unique_id=1797066126 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -170)
+
+[node name="Wall37" parent="Dungeon1_V_Walls" unique_id=690617316 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -160)
+
+[node name="Wall38" parent="Dungeon1_V_Walls" unique_id=447570197 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -150)
+
+[node name="Wall39" parent="Dungeon1_V_Walls" unique_id=1019041997 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, -140)
+
+[node name="Wall40" parent="Dungeon1_V_Walls" unique_id=1879995959 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, -10)
+
+[node name="Wall41" parent="Dungeon1_V_Walls" unique_id=2062684520 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 0)
+
+[node name="Wall42" parent="Dungeon1_V_Walls" unique_id=1622405105 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 10)
+
+[node name="Wall43" parent="Dungeon1_V_Walls" unique_id=405739976 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 75)
+
+[node name="Wall44" parent="Dungeon1_V_Walls" unique_id=819678394 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 85)
+
+[node name="Wall45" parent="Dungeon1_V_Walls" unique_id=1859349739 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 95)
+
+[node name="Wall46" parent="Dungeon1_V_Walls" unique_id=1631517503 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 45)
+
+[node name="Wall47" parent="Dungeon1_V_Walls" unique_id=1498235495 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 55)
+
+[node name="Wall48" parent="Dungeon1_V_Walls" unique_id=10066868 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 65)
+
+[node name="Wall49" parent="Dungeon1_V_Walls" unique_id=2064201468 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, 70)
+
+[node name="Wall50" parent="Dungeon1_V_Walls" unique_id=364524646 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, 80)
+
+[node name="Wall51" parent="Dungeon1_V_Walls" unique_id=1054885268 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, 90)
+
+[node name="Wall52" parent="Dungeon1_V_Walls" unique_id=1634811175 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, 40)
+
+[node name="Wall53" parent="Dungeon1_V_Walls" unique_id=1155595087 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, 50)
+
+[node name="Wall54" parent="Dungeon1_V_Walls" unique_id=1403055062 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -170, 5, 60)
+
+[node name="Wall55" parent="Dungeon1_V_Walls" unique_id=624698183 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 140)
+
+[node name="Wall56" parent="Dungeon1_V_Walls" unique_id=275758863 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 150)
+
+[node name="Wall57" parent="Dungeon1_V_Walls" unique_id=777582378 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 160)
+
+[node name="Wall58" parent="Dungeon1_V_Walls" unique_id=1116003332 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 110)
+
+[node name="Wall59" parent="Dungeon1_V_Walls" unique_id=1369349503 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 120)
+
+[node name="Wall60" parent="Dungeon1_V_Walls" unique_id=123748951 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -200, 5, 130)
+
+[node name="Wall61" parent="Dungeon1_V_Walls" unique_id=1806584510 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 180)
+
+[node name="Wall62" parent="Dungeon1_V_Walls" unique_id=512064910 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 190)
+
+[node name="Wall63" parent="Dungeon1_V_Walls" unique_id=438765137 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 200)
+
+[node name="Wall64" parent="Dungeon1_V_Walls" unique_id=119010836 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 170)
+
+[node name="Wall65" parent="Dungeon1_V_Walls" unique_id=726595293 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 160)
+
+[node name="Wall66" parent="Dungeon1_V_Walls" unique_id=578837219 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 170)
+
+[node name="Wall67" parent="Dungeon1_V_Walls" unique_id=303456843 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 180)
+
+[node name="Wall68" parent="Dungeon1_V_Walls" unique_id=451422710 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 150)
+
+[node name="Wall69" parent="Dungeon1_V_Walls" unique_id=51577121 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 120)
+
+[node name="Wall70" parent="Dungeon1_V_Walls" unique_id=1493390039 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 130)
+
+[node name="Wall71" parent="Dungeon1_V_Walls" unique_id=690851394 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 140)
+
+[node name="Wall72" parent="Dungeon1_V_Walls" unique_id=1094933284 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 110)
+
+[node name="Wall73" parent="Dungeon1_V_Walls" unique_id=1750992658 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 80)
+
+[node name="Wall74" parent="Dungeon1_V_Walls" unique_id=1875386220 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 90)
+
+[node name="Wall75" parent="Dungeon1_V_Walls" unique_id=789252528 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -140, 5, 100)
+
+[node name="Wall76" parent="Dungeon1_V_Walls" unique_id=1289115411 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 90)
+
+[node name="Wall77" parent="Dungeon1_V_Walls" unique_id=903736475 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 100)
+
+[node name="Wall78" parent="Dungeon1_V_Walls" unique_id=1284872983 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 110)
+
+[node name="Wall79" parent="Dungeon1_V_Walls" unique_id=403898867 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 80)
+
+[node name="Wall80" parent="Dungeon1_V_Walls" unique_id=2007206419 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 70)
+
+[node name="Wall81" parent="Dungeon1_V_Walls" unique_id=312659516 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -160, 5, 60)
+
+[node name="Wall82" parent="Dungeon1_V_Walls" unique_id=2080911413 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, 60)
+
+[node name="Wall83" parent="Dungeon1_V_Walls" unique_id=1587998846 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, 50)
+
+[node name="Wall84" parent="Dungeon1_V_Walls" unique_id=1373788214 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, 40)
+
+[node name="Wall85" parent="Dungeon1_V_Walls" unique_id=1473677610 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, 30)
+
+[node name="Wall86" parent="Dungeon1_V_Walls" unique_id=1560097282 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -130, 5, 25)
+
+[node name="Wall87" parent="Dungeon1_V_Walls" unique_id=708724958 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -130, 5, 15)
+
+[node name="Wall88" parent="Dungeon1_V_Walls" unique_id=992389019 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -130, 5, -15)
+
+[node name="Wall89" parent="Dungeon1_V_Walls" unique_id=1689971935 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -130, 5, -25)
+
+[node name="Wall90" parent="Dungeon1_V_Walls" unique_id=2048857243 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, -30)
+
+[node name="Wall91" parent="Dungeon1_V_Walls" unique_id=1988460384 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, -40)
+
+[node name="Wall92" parent="Dungeon1_V_Walls" unique_id=982315236 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, -50)
+
+[node name="Wall93" parent="Dungeon1_V_Walls" unique_id=866954701 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -120, 5, -60)
+
+[node name="Wall94" parent="Dungeon1_V_Walls" unique_id=289243103 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, -30)
+
+[node name="Wall95" parent="Dungeon1_V_Walls" unique_id=494419496 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, -40)
+
+[node name="Wall96" parent="Dungeon1_V_Walls" unique_id=82231901 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, -50)
+
+[node name="Wall97" parent="Dungeon1_V_Walls" unique_id=549025999 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, -60)
+
+[node name="Plane_Map" type="MeshInstance3D" parent="." unique_id=1396571240]
+transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, 0.8811188, 0)
+material_override = SubResource("StandardMaterial3D_344ge")
+mesh = SubResource("PlaneMesh_m6x6n")
