@@ -15,7 +15,7 @@ func _ready() -> void:
 	audio_player.stream = default_audio_stream
 
 func _unhandled_input(event: InputEvent) -> void:
-	if player_inside and require_input_action != "" and event.is_action_pressed(require_input_action):
+	if player_inside and audio_stream and require_input_action != "" and event.is_action_pressed(require_input_action):
 		audio_player.stop()
 		audio_player.playing = false
 		audio_player.stream = audio_stream

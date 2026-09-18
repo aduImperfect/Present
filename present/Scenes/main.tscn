@@ -9,6 +9,10 @@
 [ext_resource type="Texture2D" uid="uid://dlux2ilx7bsst" path="res://Textures/dcc_example_num.png" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://34xoybaf1txi" path="res://Scenes/god.tscn" id="8_344ge"]
 [ext_resource type="PackedScene" uid="uid://ksak2t6pq0sc" path="res://Scenes/prayframe.tscn" id="9_ynf5e"]
+[ext_resource type="Script" uid="uid://cwcyet573okul" path="res://Scripts/area_interaction.gd" id="10_d1ilt"]
+[ext_resource type="AudioStream" uid="uid://dlip4y771cqi6" path="res://Audio/bg.wav" id="11_d1ilt"]
+[ext_resource type="PackedScene" uid="uid://c0153vupjvkp8" path="res://Scenes/clear.tscn" id="12_6iyac"]
+[ext_resource type="PackedScene" uid="uid://b0pbr0po7b5eb" path="res://Scenes/winter.tscn" id="13_fdnlq"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
 
@@ -17,10 +21,14 @@ albedo_texture = ExtResource("7_6bp64")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_m6x6n"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_fdnlq"]
+size = Vector3(588.76587, 73.09094, 555.18774)
+
 [node name="Node3D" type="Node3D" unique_id=1406904920]
 
 [node name="Ceiling" parent="." unique_id=599588367 instance=ExtResource("5_kry3j")]
 transform = Transform3D(1000, 0, 0, 0, 1, 0, 0, 0, 1000, 0, 10, 0)
+visible = false
 
 [node name="Ground" parent="." unique_id=1287926691 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 0, -1.5, 0)
@@ -54,12 +62,13 @@ spring_length = 4.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 5)
 fov = 60.0
 near = 1.0
-far = 12.5
+far = 35.0
 
 [node name="SpotLight3D" type="SpotLight3D" parent="PlayerCharacter/CamPivot/CamPitch/Camera3D" unique_id=1743991782]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -2.6951694, 4.66817)
-spot_range = 20.0
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -5, 4.668)
+spot_range = 50.0
 spot_attenuation = 0.1
+spot_angle = 90.0
 
 [node name="AreaLight3D" type="AreaLight3D" parent="PlayerCharacter" unique_id=672889738]
 transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, 1, 0, -1, -2.9802322e-08, 0, 13.660254, 0)
@@ -2263,6 +2272,18 @@ transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, 115, 5, -65)
 [node name="Wall341" parent="Dungeon1_V_Walls" unique_id=2011664984 instance=ExtResource("3_8gbba")]
 transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, 115, 5, -75)
 
+[node name="Wall342" parent="Dungeon1_V_Walls" unique_id=796111805 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, 60)
+
+[node name="Wall343" parent="Dungeon1_V_Walls" unique_id=120202980 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, 50)
+
+[node name="Wall344" parent="Dungeon1_V_Walls" unique_id=1085122207 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, 40)
+
+[node name="Wall345" parent="Dungeon1_V_Walls" unique_id=503917606 instance=ExtResource("3_8gbba")]
+transform = Transform3D(5, 0, 0, 0, 10, 0, 0, 0, 10, -100, 5, 30)
+
 [node name="Plane_Map" type="MeshInstance3D" parent="." unique_id=1396571240]
 transform = Transform3D(200, 0, 0, 0, 1, 0, 0, 0, 200, 0, 0.8811188, 0)
 visible = false
@@ -2274,3 +2295,23 @@ transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 
 
 [node name="Prayframe" parent="." unique_id=1487509168 instance=ExtResource("9_ynf5e")]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 0.8317578, 197.45)
+
+[node name="Area3D" type="Area3D" parent="." unique_id=197701896]
+script = ExtResource("10_d1ilt")
+default_audio_stream = ExtResource("11_d1ilt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=2043594015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.639282, 4.314148, -3.1619873)
+shape = SubResource("BoxShape3D_fdnlq")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=93288079]
+attenuation_model = 3
+unit_size = 100.0
+max_db = 6.0
+max_distance = 4096.0
+
+[node name="Clear" parent="." unique_id=1187744232 instance=ExtResource("12_6iyac")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -62.75, 5, -190)
+
+[node name="Winter" parent="." unique_id=226333651 instance=ExtResource("13_fdnlq")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -197.45, 5, 0)
