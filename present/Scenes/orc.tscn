@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dmikmucbergjp" path="res://Textures/Orc_Walk.png" id="2_6et41"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
-size = Vector3(1, 1.5, 0.5)
+size = Vector3(1.5, 2, 0.75)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6ybav"]
 atlas = ExtResource("1_8h1l3")
@@ -120,14 +120,16 @@ animations = [{
 [node name="Orc" type="Node3D" unique_id=974761849]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1603618917]
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1460150874]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.00018310547)
 shape = SubResource("BoxShape3D_m6x6n")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="RigidBody3D" unique_id=189105362]
-pixel_size = 0.1
+pixel_size = 0.15
 sprite_frames = SubResource("SpriteFrames_m6x6n")
 animation = &"Orc_Walk"
 autoplay = "Orc_Idle"
-frame_progress = 0.6207991
+frame_progress = 0.8172629
