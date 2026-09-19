@@ -13,6 +13,9 @@
 [ext_resource type="AudioStream" uid="uid://dlip4y771cqi6" path="res://Audio/bg.wav" id="11_d1ilt"]
 [ext_resource type="PackedScene" uid="uid://c0153vupjvkp8" path="res://Scenes/clear.tscn" id="12_6iyac"]
 [ext_resource type="PackedScene" uid="uid://b0pbr0po7b5eb" path="res://Scenes/winter.tscn" id="13_fdnlq"]
+[ext_resource type="PackedScene" uid="uid://b33iobi0uyo1v" path="res://Scenes/halo_tree.tscn" id="14_jkdf5"]
+[ext_resource type="PackedScene" uid="uid://cdpa6xnpdecff" path="res://Scenes/poke_this.tscn" id="15_wsu2k"]
+[ext_resource type="Script" uid="uid://d230mbem3s62n" path="res://Scripts/audios_check.gd" id="16_k12tt"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
 
@@ -34,10 +37,10 @@ visible = false
 transform = Transform3D(500, 0, 0, 0, 1, 0, 0, 0, 500, 0, -1.5, 0)
 
 [node name="Soldier" parent="." unique_id=990575850 instance=ExtResource("1_jjgbg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4226147, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 148.34113, 1.4226147, 0)
 
 [node name="Orc" parent="." unique_id=974761849 instance=ExtResource("6_21xkr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.902838, 1.2112466, -4.3004036)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.507202, 1.2112466, -4.2325745)
 
 [node name="PlayerCharacter" type="CharacterBody3D" parent="." unique_id=2105354996 groups=["player"]]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 90, 5, 190)
@@ -2304,7 +2307,7 @@ default_audio_stream = ExtResource("11_d1ilt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.639282, 4.314148, -3.1619873)
 shape = SubResource("BoxShape3D_fdnlq")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=93288079]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=93288079 groups=["audio_players", "bg_audio"]]
 attenuation_model = 3
 unit_size = 100.0
 max_db = 6.0
@@ -2315,3 +2318,59 @@ transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -62.
 
 [node name="Winter" parent="." unique_id=226333651 instance=ExtResource("13_fdnlq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -197.45, 5, 0)
+
+[node name="Devs" type="Node3D" parent="." unique_id=632143706]
+
+[node name="HaloTree" parent="Devs" unique_id=313371176 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3.75, 190)
+
+[node name="HaloTree2" parent="Devs" unique_id=573332326 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3.75, 190)
+
+[node name="HaloTree3" parent="Devs" unique_id=1107499911 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3.75, 190)
+
+[node name="HaloTree4" parent="Devs" unique_id=1426825016 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3.75, 190)
+
+[node name="HaloTree5" parent="Devs" unique_id=1474617795 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 3.75, 190)
+
+[node name="HaloTree6" parent="Devs" unique_id=868596177 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 3.75, 190)
+
+[node name="HaloTree7" parent="Devs" unique_id=397579182 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3.75, 155)
+
+[node name="HaloTree8" parent="Devs" unique_id=488922759 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3.75, 155)
+
+[node name="HaloTree9" parent="Devs" unique_id=138077337 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 3.75, 155)
+
+[node name="HaloTree10" parent="Devs" unique_id=428654180 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3.75, 155)
+
+[node name="HaloTree11" parent="Devs" unique_id=2137871604 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 3.75, 155)
+
+[node name="HaloTree12" parent="Devs" unique_id=1943097944 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 3.75, 155)
+
+[node name="HaloTree13" parent="Devs" unique_id=511204518 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 3.75, 175)
+
+[node name="HaloTree14" parent="Devs" unique_id=1518158817 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 3.75, 175)
+
+[node name="HaloTree15" parent="Devs" unique_id=366625893 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3.75, 175)
+
+[node name="HaloTree16" parent="Devs" unique_id=975903264 instance=ExtResource("14_jkdf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, 3.75, 175)
+
+[node name="Poke" parent="Devs" unique_id=2023237217 instance=ExtResource("15_wsu2k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 5, -197.41875)
+
+[node name="AudiosCheck" type="Node3D" parent="." unique_id=586559589]
+script = ExtResource("16_k12tt")

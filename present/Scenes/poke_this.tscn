@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cdpa6xnpdecff"]
+
+[ext_resource type="Script" uid="uid://cwcyet573okul" path="res://Scripts/area_interaction.gd" id="1_wh7i6"]
+[ext_resource type="AudioStream" uid="uid://cepdf1obtvr16" path="res://Audio/pika_stat.wav" id="2_1vw10"]
+[ext_resource type="Texture2D" uid="uid://180dyg5qxm84" path="res://Textures/poke_stat.jpg" id="3_1vw10"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lh1pw"]
+size = Vector3(10, 9.996094, 21.11914)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lh1pw"]
+albedo_texture = ExtResource("3_1vw10")
+
+[sub_resource type="QuadMesh" id="QuadMesh_ovl68"]
+
+[node name="Poke" type="Node3D" unique_id=974761849]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1822493215]
+script = ExtResource("1_wh7i6")
+default_audio_stream = ExtResource("2_1vw10")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1907465445]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.30371094, 3.965088)
+shape = SubResource("BoxShape3D_lh1pw")
+
+[node name="Portrait" type="MeshInstance3D" parent="Area3D" unique_id=777844146]
+transform = Transform3D(10, 0, 0, 0, 7.5, 0, 0, 0, 5, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_lh1pw")
+mesh = SubResource("QuadMesh_ovl68")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=1761946522 groups=["audio_players"]]
+attenuation_model = 3
+unit_size = 100.0
+max_db = 6.0
+max_distance = 100.0

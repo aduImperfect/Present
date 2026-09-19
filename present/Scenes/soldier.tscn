@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cnvhivyg5w0ae" path="res://Textures/Soldier_Idle.png" id="1_rwu2g"]
 [ext_resource type="Texture2D" uid="uid://lbofbihehqsc" path="res://Textures/Soldier_Walk.png" id="2_e0j01"]
+[ext_resource type="Script" uid="uid://cwcyet573okul" path="res://Scripts/area_interaction.gd" id="3_5uilc"]
+[ext_resource type="AudioStream" uid="uid://c8f7oqniwqmet" path="res://Audio/soldier_thinking.wav" id="4_nvfwk"]
+[ext_resource type="AudioStream" uid="uid://d0yu0lltk6thw" path="res://Audio/solider_speech.wav" id="5_xhcvx"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
 size = Vector3(1.5, 3, 0.75)
@@ -117,6 +120,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_001jn"]
+size = Vector3(15.456299, 9.996094, 15.7699585)
+
 [node name="Soldier" type="Node3D" unique_id=974761849]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1603618917]
@@ -133,3 +139,18 @@ sprite_frames = SubResource("SpriteFrames_m6x6n")
 animation = &"Soldier_Walk"
 autoplay = "Soldier_Idle"
 frame_progress = 0.18044576
+
+[node name="Area3D" type="Area3D" parent="RigidBody3D" unique_id=2048414268]
+script = ExtResource("3_5uilc")
+default_audio_stream = ExtResource("4_nvfwk")
+audio_stream = ExtResource("5_xhcvx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Area3D" unique_id=419843872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49230957, -0.30371094, 0.41104126)
+shape = SubResource("BoxShape3D_001jn")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RigidBody3D/Area3D" unique_id=1476923137]
+attenuation_model = 3
+unit_size = 100.0
+max_db = 6.0
+max_distance = 100.0

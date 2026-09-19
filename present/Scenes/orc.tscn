@@ -2,6 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://dgmv2pl65reav" path="res://Textures/Orc_Idle.png" id="1_8h1l3"]
 [ext_resource type="Texture2D" uid="uid://dmikmucbergjp" path="res://Textures/Orc_Walk.png" id="2_6et41"]
+[ext_resource type="Script" uid="uid://cwcyet573okul" path="res://Scripts/area_interaction.gd" id="3_cwpwq"]
+[ext_resource type="AudioStream" uid="uid://cbupxhe4rd181" path="res://Audio/orc_humming.wav" id="4_7pxyq"]
+[ext_resource type="AudioStream" uid="uid://b6ih5rrr82u01" path="res://Audio/orc_talk.wav" id="5_2ecxu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m6x6n"]
 size = Vector3(1.5, 2, 0.75)
@@ -117,6 +120,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_2ecxu"]
+size = Vector3(10, 9.996094, 20)
+
 [node name="Orc" type="Node3D" unique_id=974761849]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1603618917]
@@ -133,3 +139,18 @@ sprite_frames = SubResource("SpriteFrames_m6x6n")
 animation = &"Orc_Walk"
 autoplay = "Orc_Idle"
 frame_progress = 0.8172629
+
+[node name="Area3D" type="Area3D" parent="RigidBody3D" unique_id=1422753575]
+script = ExtResource("3_cwpwq")
+default_audio_stream = ExtResource("4_7pxyq")
+audio_stream = ExtResource("5_2ecxu")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Area3D" unique_id=495139033]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.49230957, -0.30371094, 0.41104126)
+shape = SubResource("BoxShape3D_2ecxu")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="RigidBody3D/Area3D" unique_id=1683433023 groups=["audio_players"]]
+attenuation_model = 3
+unit_size = 100.0
+max_db = 6.0
+max_distance = 100.0

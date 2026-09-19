@@ -27,7 +27,7 @@ transform = Transform3D(10, 0, 0, 0, 7.5, 0, 0, 0, 5, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_v4e2q")
 mesh = SubResource("QuadMesh_65vsh")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=157331592]
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=157331592 groups=["audio_players"]]
 attenuation_model = 3
 unit_size = 100.0
 max_db = 6.0

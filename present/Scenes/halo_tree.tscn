@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b33iobi0uyo1v"]
+
+[ext_resource type="Script" uid="uid://cwcyet573okul" path="res://Scripts/area_interaction.gd" id="1_ixmwf"]
+[ext_resource type="Texture2D" uid="uid://poic4rntqukk" path="res://Textures/tree_pixel_art.png" id="1_yvj6h"]
+[ext_resource type="AudioStream" uid="uid://ov1cm3s84wir" path="res://Audio/halo_normal.wav" id="2_05ce7"]
+[ext_resource type="Texture2D" uid="uid://dbtcg8yiqtmeq" path="res://Textures/Halo_ring_pixel_art.png" id="2_lsixh"]
+[ext_resource type="AudioStream" uid="uid://c8m4nc4lhv25l" path="res://Audio/halo_speaks.wav" id="3_4adkc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4adkc"]
+size = Vector3(29.790405, 9.996094, 28.86084)
+
+[node name="HaloTree" type="Node3D" unique_id=974761849]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=668651913]
+script = ExtResource("1_ixmwf")
+default_audio_stream = ExtResource("2_05ce7")
+audio_stream = ExtResource("3_4adkc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1116224339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.48406982, -0.30371094, 0.09423828)
+shape = SubResource("BoxShape3D_4adkc")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Area3D" unique_id=35057919 groups=["audio_players"]]
+attenuation_model = 3
+unit_size = 100.0
+max_db = 6.0
+max_distance = 100.0
+
+[node name="TreeSprite3D" type="Sprite3D" parent="Area3D" unique_id=235502619]
+pixel_size = 0.005
+texture = ExtResource("1_yvj6h")
+
+[node name="HaloSprite3D" type="Sprite3D" parent="Area3D" unique_id=1694694521]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 4.740016, 1.6261921)
+pixel_size = 0.005
+texture = ExtResource("2_lsixh")
+
+[node name="HaloSprite3D_2" type="Sprite3D" parent="Area3D" unique_id=2114031335]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 5.147826, -1.0577526)
+flip_v = true
+pixel_size = 0.005
+texture = ExtResource("2_lsixh")

@@ -19,9 +19,25 @@ func _unhandled_input(event: InputEvent) -> void:
 		audio_player.stop()
 		audio_player.playing = false
 		audio_player.stream = audio_stream
+
+		if !is_in_group("bg_audio"):
+			var all_players: Array[Node] = find_all_audio_players(get_tree().current_scene)
+			for k in all_players.size():
+				if is_in_group("bg_audio"):
+					all_players[k].stop()
+					break
+
 		trigger_interaction()
 	elif player_inside and !audio_player.playing and !event.is_action_pressed(require_input_action):
 		audio_player.stream = default_audio_stream
+		
+		if !is_in_group("bg_audio"):
+			var all_players: Array[Node] = find_all_audio_players(get_tree().current_scene)
+			for k in all_players.size():
+				if is_in_group("bg_audio"):
+					all_players[k].stop()
+					break
+
 		trigger_interaction()
 
 func _on_body_entered(body: Node3D) -> void:
@@ -45,3 +61,16 @@ func trigger_interaction() -> void:
 	if target_scene_pack:
 		await get_tree().create_timer(0.2).timeout # short delay for sound start optionally
 		get_tree().change_scene_to_packed(target_scene_pack)
+
+
+# Recursively traverses the tree to find AudioStreamPlayer, AudioStreamPlayer2D, and AudioStreamPlayer3D
+func find_all_audio_players(root: Node) -> Array[Node]:
+	var players: Array[Node] = []
+	
+	if root is AudioStreamPlayer or root is AudioStreamPlayer2D or root is AudioStreamPlayer3D:
+		players.append(root)
+		
+	for child in root.get_children():
+		players.append_array(find_all_audio_players(child))
+		
+	return players

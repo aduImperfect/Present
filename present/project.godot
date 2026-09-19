@@ -22,6 +22,12 @@ window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
+[global_group]
+
+audio_players=""
+player=""
+bg_audio=""
+
 [input]
 
 move_forward={
